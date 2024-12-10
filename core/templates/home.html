@@ -1,13 +1,16 @@
 {% extends 'layout.html' %}
-
+{% load static %}
 {% block body %}
 
-<section id="home" class="hero bg-primary text-white text-center py-5">
-        <div class="container">
-            <h1 class="display-4">Unlock the Power of Safaricom with HARVESTERS</h1>
-            <p class="lead">Your trusted partner in leveraging Safaricom’s products for business growth.</p>
-            <a href="#contact" class="btn btn-light">Get Started</a>
-        </div>
+    <section>
+        <div style="background-image: url({% static 'images/frontier2.jpg' %}); background-size: cover; background-position: center; height: 100vh;">
+            <div class = "container-md position-absolute bottom-0 end-0 success" >
+                <h1 class="display-4 text-success">Unlock the power of Safaricom with HARVESTERS</h1>
+                 <p class="lead text-white">Your trusted partner in leveraging Safaricom’s products for business growth.</p>
+                <a href="/services" class="btn btn-light">Get Started</a>
+            </div>
+          </div>
+
     </section>
 
     <!-- About Us Section -->
