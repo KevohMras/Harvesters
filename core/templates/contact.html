@@ -1,34 +1,41 @@
-{% extends 'layout.html' %}
+{% extends "layout.html" %}
 
-{% block body %}
+{% block title %}Contact Us{% endblock %}
 
-<section class="py-5">
-    {% if success %}
-        <div class="alert alert-success" role="alert">
-            Thank you for your message! We will get back to you shortly.
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <!-- Contact Form Section -->
+        <div class="col-md-6">
+            <h2>Contact Us</h2>
+            <form method="post">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
         </div>
-    {% endif %}
 
-
-    <div class="container">
-        <h2 class="text-center mb-4">Get in Touch</h2>
-        <form action="/contact/" method="post">
-            {% csrf_token %}
-            <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" name="name" required>
-            </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" name="email" required>
-            </div>
-            <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Send Message</button>
-        </form>
+        <!-- Map Section -->
+        <div class="col-md-6">
+            <h2>Our Location</h2>
+            <!-- Google Maps Embed -->
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.291345376347!2d-73.9975494!3d40.7306108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259af3c1cf5d1%3A0x7ee7c4b91c1f222b!2sGoogle%20Inc.!5e0!3m2!1sen!2sus!4v1637885230475!5m2!1sen!2sus"
+                width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
     </div>
-</section>
+</div>
 
-{% endblock%}
+{% endblock %}

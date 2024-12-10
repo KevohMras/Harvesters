@@ -1,7 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import redirect,render
 from django.core.mail import send_mail
 from django.conf import settings
+from pyexpat.errors import messages
+
 from .models import Product
+from .models import Subscriber
 
 def home(request):
     return render(request, "home.html")
@@ -39,3 +42,16 @@ def contact(request):
 def products(request):
     product_list = Product.objects.all()
     return render(request, "products.html", {'products': product_list})
+
+def subscribe(request):
+    if request.method == "POST":
+        email = request.POST.get("email")
+        if email:
+            if Subscriber.objects.filter(email=email).exists():
+                messages.warning(request, "You are already subscribed!")
+            else:
+                Subscriber.objects.create(email=email)
+                messages.success(request, "Thank you for subscribing!")
+        else:
+            messages.error(request, "Please enter a valid email address!")
+    return redirect("/")
