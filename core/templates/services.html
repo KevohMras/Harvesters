@@ -1,4 +1,5 @@
 {% extends 'layout.html' %}
+{% load static %}
 
 {% block body %}
 
@@ -8,59 +9,74 @@
     <p class="lead">Empowering Your eCommerce Growth, One Solution at a Time</p>
 </header>
 
-<!-- Services Section -->
-<section class="py-5">
-    <h2 class="text-center mb-4">What We Offer</h2>
-    <div class="row g-4">
-        <!-- Service 1 -->
-        <div class="col-md-6 col-lg-4">
-            <div class="card h-100 shadow">
-                <div class="card-body">
-                    <h4 class="card-title">eCommerce Website Development</h4>
-                    <p class="card-text">
-                        We design responsive, user-friendly eCommerce websites tailored to your brand. Build a stunning online store and captivate your customers.
-                    </p>
-                    <ul class="list-unstyled">
-                        <li>- Custom-built designs</li>
-                        <li>- Payment gateway integration</li>
-                        <li>- Mobile-first design</li>
-                        <li>- SEO optimization</li>
-                    </ul>
-                    <a href="#" class="btn btn-primary">Get Your Store Online</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Service 2 -->
-        <div class="col-md-6 col-lg-4">
-            <div class="card h-100 shadow">
-                <div class="card-body">
-                    <h4 class="card-title">Digital Marketing and Advertising</h4>
-                    <p class="card-text">
-                        Reach your audience with data-driven strategies. From social media to PPC, we ensure your campaigns convert and grow your brand.
-                    </p>
-                    <ul class="list-unstyled">
-                        <li>- Social media management</li>
-                        <li>- Google Ads campaigns</li>
-                        <li>- Email marketing</li>
-                        <li>- ROI-focused analytics</li>
-                    </ul>
-                    <a href="#" class="btn btn-primary">Grow Your Brand</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Additional services omitted for brevity -->
+<section id="recent-posts" class="py-5 bg-light">
+    <!-- Section Title -->
+    <div class="container text-center mb-5">
+      <h2 class="fw-bold">Recent Posts</h2>
+      <p class="text-muted">Necessitatibus eius consequatur</p>
     </div>
-</section>
 
-<!-- Call to Action -->
-<section class="bg-dark text-white py-5 text-center">
-    <h2>Why Choose HARVESTERS?</h2>
-    <p class="mb-4">
-        Our team brings expertise, innovation, and a proven track record to help you thrive in the eCommerce space. From development to optimization, we're with you every step of the way.
-    </p>
-    <a href="/contact" class="btn btn-primary btn-lg">Contact Us Today</a>
-</section>
+    <div class="container">
+      <div class="row g-4">
+        <!-- Post Item 1 -->
+        <div class="col-xl-4 col-md-6">
+          <div class="card h-100 shadow-sm">
+            <div class="position-relative">
+              <img src= "{% static 'images/frontier1.jpg' %}" class="card-img-top" alt="Post Image">
+              <span class="position-absolute top-0 start-0 bg-dark text-white px-3 py-1 small">December 12</span>
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Eum ad dolor et. Autem aut fugiat debitis</h5>
+              <div class="d-flex align-items-center small text-muted">
+                <div><i class="bi bi-person"></i> <span class="ps-1">Julia Parker</span></div>
+                <span class="px-2">/</span>
+                <div><i class="bi bi-folder2"></i> <span class="ps-1">Politics</span></div>
+              </div>
+              <hr>
+              <a href="blog-details.html" class="btn btn-link mt-auto text-decoration-none">Read More <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- Post Item 2 -->
+        <div class="col-xl-4 col-md-6">
+          <div class="card h-100 shadow-sm">
+            <div class="position-relative">
+              <img src="assets/img/blog/blog-2.jpg" class="card-img-top" alt="Post Image">
+              <span class="position-absolute top-0 start-0 bg-dark text-white px-3 py-1 small">July 17</span>
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Et repellendus molestiae qui est sed omnis</h5>
+              <div class="d-flex align-items-center small text-muted">
+                <div><i class="bi bi-person"></i> <span class="ps-1">Mario Douglas</span></div>
+                <span class="px-2">/</span>
+                <div><i class="bi bi-folder2"></i> <span class="ps-1">Sports</span></div>
+              </div>
+              <hr>
+              <a href="blog-details.html" class="btn btn-link mt-auto text-decoration-none">Read More <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- Post Item 3 -->
+        <div class="col-xl-4 col-md-6">
+          <div class="card h-100 shadow-sm">
+            <div class="position-relative">
+              <img src="assets/img/blog/blog-3.jpg" class="card-img-top" alt="Post Image">
+              <span class="position-absolute top-0 start-0 bg-dark text-white px-3 py-1 small">September 05</span>
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Quia assumenda est et veritati tirana ploder</h5>
+              <div class="d-flex align-items-center small text-muted">
+                <div><i class="bi bi-person"></i> <span class="ps-1">Lisa Hunter</span></div>
+                <span class="px-2">/</span>
+                <div><i class="bi bi-folder2"></i> <span class="ps-1">Economics</span></div>
+              </div>
+              <hr>
+              <a href="blog-details.html" class="btn btn-link mt-auto text-decoration-none">Read More <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 {% endblock%}

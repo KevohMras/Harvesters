@@ -3,156 +3,39 @@
 
 {% block body %}
 
-    <section>
-        <div style="background-image: url({% static 'images/frontier2.jpg' %}); background-size: cover; background-position: center; height: 100vh;">
-            <div class = "container-md position-absolute bottom-0 end-0 success" >
-                <h1 class="display-4 text-white">Unlock the power of Safaricom with <strong>HARVESTERS</strong></h1>
-                 <p class="lead text-white">Your trusted partner in leveraging Safaricom’s products for business growth.</p>
-                <a href="/services" class="btn btn-light">Get Started</a>
+ <!-- Deal of the Day Section -->
+<section class="py-5 text-white" style="background-image: url{% static 'images/harvesterslogo.jpg' %} ; background-size: cover; background-position: center;">
+  <div class="container">
+    <div class="row justify-content-end">
+      <div class="col-md-6">
+        <div class="bg-dark bg-opacity-50 p-4 rounded">
+          <span class="badge bg-primary mb-2">Best Price For You</span>
+          <h2 class="mb-4">Deal of the Day</h2>
+          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+          <h3><a href="#" class="text-warning">Spinach</a></h3>
+          <span class="price h4">$10 <a href="#" class="text-danger">now $5 only</a></span>
+          <div class="d-flex mt-4">
+            <div class="text-center me-3">
+              <div class="display-6" id="days">00</div>
+              <small>Days</small>
+            </div>
+            <div class="text-center me-3">
+              <div class="display-6" id="hours">00</div>
+              <small>Hours</small>
+            </div>
+            <div class="text-center me-3">
+              <div class="display-6" id="minutes">00</div>
+              <small>Minutes</small>
+            </div>
+            <div class="text-center">
+              <div class="display-6" id="seconds">00</div>
+              <small>Seconds</small>
             </div>
           </div>
-
-    </section>
-
-    <!-- About Us Section -->
-    <section id="about" class="py-5">
-        <div class="container">
-            <h2 class="text-center">About Us</h2>
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <img src= "{% static 'images/imageholder.jpg' %}" class="img-fluid" alt="About Us">
-                </div>
-                <div class="col-md-6">
-                    <p>At HARVESTERS, we are committed to helping businesses leverage the power of Safaricom’s innovative products. Our team of experts offers tailored solutions for all your business needs.</p>
-                </div>
-            </div>
         </div>
-    </section>
-
-    <!-- Our Services Section -->
-    <section id="services" class="bg-light py-5">
-        <div class="container">
-            <h2 class="text-center">Our Services</h2>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src= "{% static 'images/imageholder.jpg' %}" class="card-img-top" alt="Mobile Payment Solutions">
-                        <div class="card-body">
-                            <h5 class="card-title">Mobile Payment Solutions</h5>
-                            <p class="card-text">Seamlessly integrate M-Pesa for secure and efficient transactions.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src= "{% static 'images/imageholder.jpg' %}"class="card-img-top" alt="Business Connectivity">
-                        <div class="card-body">
-                            <h5 class="card-title">Business Connectivity</h5>
-                            <p class="card-text">Set up reliable voice and data services for your business needs.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src= "{% static 'images/imageholder.jpg' %}" class="card-img-top" alt="Safaricom Data Plans">
-                        <div class="card-body">
-                            <h5 class="card-title">Safaricom Data Plans</h5>
-                            <p class="card-text">Get the best data plans tailored to your needs, whether individual or business.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src= "{% static 'images/imageholder.jpg' %}" class="card-img-top" alt="Consultation Services">
-                        <div class="card-body">
-                            <h5 class="card-title">Consultation Services</h5>
-                            <p class="card-text">Expert advice on maximizing the use of Safaricom's services to grow your business.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Client Success Stories Section -->
-    <section id="success-stories" class="py-5">
-        <div class="container">
-            <h2 class="text-center">Client Success Stories</h2>
-            <div class="row">
-                <div class="col-md-6 mb-4">
-                    <div class="card">
-                        <img src= "{% static 'images/imageholder.jpg' %}" class="card-img-top" alt="XYZ Corp">
-                        <div class="card-body">
-                            <h5 class="card-title">XYZ Corp - Revolutionizing Payments</h5>
-                            <p class="card-text">With HARVESTERS' seamless M-Pesa integration, XYZ Corp has seen a 40% increase in transaction efficiency. The shift to digital payments helped reduce errors and streamline processes.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="card">
-                        <img src= "{% static 'images/imageholder.jpg' %}" class="card-img-top" alt="ABC Ltd">
-                        <div class="card-body">
-                            <h5 class="card-title">ABC Ltd - Boosting Connectivity</h5>
-                            <p class="card-text">ABC Ltd improved its internal communications by adopting Safaricom’s business connectivity services. The result? A 30% reduction in downtime and enhanced collaboration across teams.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Blog Section -->
-    <section id="blog" class="bg-light py-5">
-        <div class="container">
-            <h2 class="text-center">Blog & Resources</h2>
-            <div class="row">
-                <div class="col-md-6 mb-4">
-                    <div class="card">
-                        <img src= "{% static 'images/imageholder.jpg' %}" class="card-img-top" alt="Maximizing Data Plans">
-                        <div class="card-body">
-                            <h5 class="card-title"><a href="#">Maximizing Your Safaricom Data Plan</a></h5>
-                            <p class="card-text">Learn how to choose the best data plan to meet your business needs. Our guide helps you understand all available options and how to make them work for you.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="card">
-                        <img src= "{% static 'images/imageholder.jpg' %}" class="card-img-top" alt="Future of Mobile Payments">
-                        <div class="card-body">
-                            <h5 class="card-title"><a href="#">The Future of Mobile Payments in Kenya</a></h5>
-                            <p class="card-text">The mobile payments industry in Kenya is booming. Discover how Safaricom is at the forefront of this transformation and how your business can benefit.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us Section -->
-    <section id="why-choose" class="py-5">
-        <div class="container">
-            <h2 class="text-center">Why Choose Us?</h2>
-            <ul class="list-unstyled text-center">
-                <li><strong>Expert Knowledge:</strong> In-depth understanding of Safaricom products.</li>
-                <li><strong>Tailored Solutions:</strong> Customized solutions to meet your unique needs.</li>
-                <li><strong>Reliable Support:</strong> Dedicated support to assist you whenever you need it.</li>
-                <li><strong>Proven Success:</strong> A track record of helping businesses grow with Safaricom.</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Client Testimonials Section -->
-    <section id="testimonials" class="bg-light py-5">
-        <div class="container">
-            <h2 class="text-center">Client Testimonials</h2>
-            <blockquote class="blockquote text-center">
-                <p class="mb-0">"HARVESTERS transformed our payment processes with their seamless M-Pesa integration. Our business is now more efficient!"</p>
-            </blockquote>
-            <footer class="blockquote-footer text-center">Jane K., CEO of XYZ Corp</footer>
-        </div>
-    </section>
-
+      </div>
+    </div>
+  </div>
+</section>
 
 {% endblock %}

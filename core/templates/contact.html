@@ -1,39 +1,81 @@
 {% extends "layout.html" %}
 
 {% block body %}
-<div class="container mt-5">
-    <div class="row">
-        <!-- Contact Form Section -->
-        <div class="col-md-6">
-            <h2>Contact Us</h2>
-            <form method="post">
-                {% csrf_token %}
-                <div class="mb-3">
-                    <label for="name" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="name" name="name" required>
-                </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="email" name="email" required>
-                </div>
-                <div class="mb-3">
-                    <label for="message" class="form-label">Message</label>
-                    <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Send Message</button>
-            </form>
-        </div>
 
-        <!-- Map Section -->
-        <div class="col-md-6">
-            <h2>Our Location</h2>
-            <!-- Google Maps Embed -->
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.291345376347!2d-73.9975494!3d40.7306108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259af3c1cf5d1%3A0x7ee7c4b91c1f222b!2sGoogle%20Inc.!5e0!3m2!1sen!2sus!4v1637885230475!5m2!1sen!2sus"
-                width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
-            </iframe>
-        </div>
+<section id="contact" class="contact section py-5">
+
+    <!-- Google Maps -->
+    <div class="mb-5">
+      <iframe class="w-100" style="height: 400px;"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
+              frameborder="0" allowfullscreen=""></iframe>
     </div>
-</div>
+    <!-- End Google Maps -->
+
+    <div class="container" data-aos="fade">
+      <div class="row gy-4 gx-5">
+
+        <!-- Contact Information -->
+        <div class="col-lg-4 shadow">
+          <div class="info">
+            <h3>Get in touch</h3>
+            <p>Et id eius voluptates atque nihil voluptatem enim in tempore minima sit ad mollitia commodi minus.</p>
+
+            <div class="d-flex align-items-start mb-3">
+              <i class="bi bi-geo-alt fs-4 me-3"></i>
+              <div>
+                <h4>Location:</h4>
+                <p>A108 Adam Street, New York, NY 535022</p>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start mb-3">
+              <i class="bi bi-envelope fs-4 me-3"></i>
+              <div>
+                <h4>Email:</h4>
+                <p>info@example.com</p>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start">
+              <i class="bi bi-phone fs-4 me-3"></i>
+              <div>
+                <h4>Call:</h4>
+                <p>+1 5589 55488 55</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Contact Information -->
+
+        <!-- Contact Form -->
+        <div class="col-lg-8">
+          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+              </div>
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary">Send Message</button>
+            </div>
+          </form>
+        </div>
+        <!-- End Contact Form -->
+
+      </div>
+    </div>
+
+  </section>
+
 
 {% endblock %}
