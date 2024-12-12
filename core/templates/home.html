@@ -1,11 +1,12 @@
 {% extends 'layout.html' %}
 {% load static %}
+
 {% block body %}
 
     <section>
         <div style="background-image: url({% static 'images/frontier2.jpg' %}); background-size: cover; background-position: center; height: 100vh;">
             <div class = "container-md position-absolute bottom-0 end-0 success" >
-                <h1 class="display-4 text-success">Unlock the power of Safaricom with HARVESTERS</h1>
+                <h1 class="display-4 text-white">Unlock the power of Safaricom with <strong>HARVESTERS</strong></h1>
                  <p class="lead text-white">Your trusted partner in leveraging Safaricom’s products for business growth.</p>
                 <a href="/services" class="btn btn-light">Get Started</a>
             </div>
@@ -19,7 +20,7 @@
             <h2 class="text-center">About Us</h2>
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <img src="images/about.jpg" class="img-fluid" alt="About Us">
+                    <img src= "{% static 'images/imageholder.jpg' %}" class="img-fluid" alt="About Us">
                 </div>
                 <div class="col-md-6">
                     <p>At HARVESTERS, we are committed to helping businesses leverage the power of Safaricom’s innovative products. Our team of experts offers tailored solutions for all your business needs.</p>
@@ -35,7 +36,7 @@
             <div class="row">
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <img src="images/payment.jpg" class="card-img-top" alt="Mobile Payment Solutions">
+                        <img src= "{% static 'images/imageholder.jpg' %}" class="card-img-top" alt="Mobile Payment Solutions">
                         <div class="card-body">
                             <h5 class="card-title">Mobile Payment Solutions</h5>
                             <p class="card-text">Seamlessly integrate M-Pesa for secure and efficient transactions.</p>
@@ -44,7 +45,7 @@
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <img src="images/connectivity.jpg" class="card-img-top" alt="Business Connectivity">
+                        <img src= "{% static 'images/imageholder.jpg' %}"class="card-img-top" alt="Business Connectivity">
                         <div class="card-body">
                             <h5 class="card-title">Business Connectivity</h5>
                             <p class="card-text">Set up reliable voice and data services for your business needs.</p>
@@ -53,7 +54,7 @@
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <img src="images/data-plans.jpg" class="card-img-top" alt="Safaricom Data Plans">
+                        <img src= "{% static 'images/imageholder.jpg' %}" class="card-img-top" alt="Safaricom Data Plans">
                         <div class="card-body">
                             <h5 class="card-title">Safaricom Data Plans</h5>
                             <p class="card-text">Get the best data plans tailored to your needs, whether individual or business.</p>
@@ -64,7 +65,7 @@
             <div class="row">
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <img src="images/consultation.jpg" class="card-img-top" alt="Consultation Services">
+                        <img src= "{% static 'images/imageholder.jpg' %}" class="card-img-top" alt="Consultation Services">
                         <div class="card-body">
                             <h5 class="card-title">Consultation Services</h5>
                             <p class="card-text">Expert advice on maximizing the use of Safaricom's services to grow your business.</p>
@@ -82,7 +83,7 @@
             <div class="row">
                 <div class="col-md-6 mb-4">
                     <div class="card">
-                        <img src="images/xyz-corp.jpg" class="card-img-top" alt="XYZ Corp">
+                        <img src= "{% static 'images/imageholder.jpg' %}" class="card-img-top" alt="XYZ Corp">
                         <div class="card-body">
                             <h5 class="card-title">XYZ Corp - Revolutionizing Payments</h5>
                             <p class="card-text">With HARVESTERS' seamless M-Pesa integration, XYZ Corp has seen a 40% increase in transaction efficiency. The shift to digital payments helped reduce errors and streamline processes.</p>
@@ -91,7 +92,7 @@
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="card">
-                        <img src="images/abc-ltd.jpg" class="card-img-top" alt="ABC Ltd">
+                        <img src= "{% static 'images/imageholder.jpg' %}" class="card-img-top" alt="ABC Ltd">
                         <div class="card-body">
                             <h5 class="card-title">ABC Ltd - Boosting Connectivity</h5>
                             <p class="card-text">ABC Ltd improved its internal communications by adopting Safaricom’s business connectivity services. The result? A 30% reduction in downtime and enhanced collaboration across teams.</p>
@@ -109,7 +110,7 @@
             <div class="row">
                 <div class="col-md-6 mb-4">
                     <div class="card">
-                        <img src="images/blog-1.jpg" class="card-img-top" alt="Maximizing Data Plans">
+                        <img src= "{% static 'images/imageholder.jpg' %}" class="card-img-top" alt="Maximizing Data Plans">
                         <div class="card-body">
                             <h5 class="card-title"><a href="#">Maximizing Your Safaricom Data Plan</a></h5>
                             <p class="card-text">Learn how to choose the best data plan to meet your business needs. Our guide helps you understand all available options and how to make them work for you.</p>
@@ -118,7 +119,7 @@
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="card">
-                        <img src="images/blog-2.jpg" class="card-img-top" alt="Future of Mobile Payments">
+                        <img src= "{% static 'images/imageholder.jpg' %}" class="card-img-top" alt="Future of Mobile Payments">
                         <div class="card-body">
                             <h5 class="card-title"><a href="#">The Future of Mobile Payments in Kenya</a></h5>
                             <p class="card-text">The mobile payments industry in Kenya is booming. Discover how Safaricom is at the forefront of this transformation and how your business can benefit.</p>
@@ -133,7 +134,7 @@
     <section id="why-choose" class="py-5">
         <div class="container">
             <h2 class="text-center">Why Choose Us?</h2>
-            <ul class="list-unstyled">
+            <ul class="list-unstyled text-center">
                 <li><strong>Expert Knowledge:</strong> In-depth understanding of Safaricom products.</li>
                 <li><strong>Tailored Solutions:</strong> Customized solutions to meet your unique needs.</li>
                 <li><strong>Reliable Support:</strong> Dedicated support to assist you whenever you need it.</li>
@@ -148,8 +149,8 @@
             <h2 class="text-center">Client Testimonials</h2>
             <blockquote class="blockquote text-center">
                 <p class="mb-0">"HARVESTERS transformed our payment processes with their seamless M-Pesa integration. Our business is now more efficient!"</p>
-                <footer class="blockquote-footer">Jane K., CEO of XYZ Corp</footer>
             </blockquote>
+            <footer class="blockquote-footer text-center">Jane K., CEO of XYZ Corp</footer>
         </div>
     </section>
 
