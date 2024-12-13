@@ -55,3 +55,6 @@ def subscribe(request):
         else:
             messages.error(request, "Please enter a valid email address!")
     return redirect("/")
+
+# def page_not_found(request, exception):
+#     return render(request, '404.html' , status=404)

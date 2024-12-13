@@ -19,7 +19,9 @@
         <div class="col-lg-4 shadow">
           <div class="info">
             <h3>Get in touch</h3>
-            <p>Et id eius voluptates atque nihil voluptatem enim in tempore minima sit ad mollitia commodi minus.</p>
+            <p>Have questions or need assistance? We're here to help! Reach out to us, and we'll get back to you promptly.
+              Whether it’s inquiries, feedback, or support, we look forward to connecting with you
+            </p>
 
             <div class="d-flex align-items-start mb-3">
               <i class="bi bi-geo-alt fs-4 me-3"></i>
@@ -33,7 +35,7 @@
               <i class="bi bi-envelope fs-4 me-3"></i>
               <div>
                 <h4>Email:</h4>
-                <p>info@example.com</p>
+                <p><a href="mailto:harvesterscommunications@gmail.com">harvesterscommunications@gmail.com</a></p>
               </div>
             </div>
 
@@ -41,7 +43,7 @@
               <i class="bi bi-phone fs-4 me-3"></i>
               <div>
                 <h4>Call:</h4>
-                <p>+1 5589 55488 55</p>
+                <p><a href="tel:+254711919639">+254 711 919639</a></p>
               </div>
             </div>
           </div>
@@ -50,7 +52,8 @@
 
         <!-- Contact Form -->
         <div class="col-lg-8">
-          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+          <form method="post" role="form">
+            {% csrf_token%}
             <div class="row">
               <div class="col-md-6 mb-3">
                 <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>

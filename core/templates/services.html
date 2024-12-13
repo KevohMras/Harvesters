@@ -3,17 +3,91 @@
 
 {% block body %}
 
-<!-- Header Section -->
-<header class="bg-success text-white py-5 text-center">
-    <h1 class="display-4">Our Services</h1>
-    <p class="lead">Empowering Your eCommerce Growth, One Solution at a Time</p>
-</header>
+<!-- Hero Section -->
+  <section class="py-5 bg-success text-white text-center">
+    <div class="container">
+      <h1>Welcome to Our Services</h1>
+      <p class="lead">We provide exceptional solutions to empower businesses and individuals with convenience and efficiency.</p>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Our Core Services</h2>
+      <div class="row g-4">
+        <!-- MPESA Superagency -->
+        <div class="col-md-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body text-center">
+              <h5 class="card-title">MPESA Superagency</h5>
+              <p class="card-text">Efficient e-float distribution and cash management for MPESA agents and businesses.
+                Experience fast and effective float topups from us.
+              </p>
+              <a href="/products" class="btn btn-primary">Explore...</a>
+            </div>
+          </div>
+        </div>
+        <!-- Device and Accessories Sales -->
+        <div class="col-md-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body text-center">
+              <h5 class="card-title">Device & Accessories Sales</h5>
+              <p class="card-text">Explore a wide range of mobile devices and accessories at competitive prices. Get
+                headsets , android settop boxes, mobile devices and other devices from top brands like Oraimo, Itel
+                and Safaricom among many others .
+              </p>
+              <a href="/products" class="btn btn-primary">Explore...</a>
+            </div>
+          </div>
+        </div>
+        <!-- Airtime Sales -->
+        <div class="col-md-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body text-center">
+              <h5 class="card-title">Airtime Sales</h5>
+              <p class="card-text">Convenient airtime solutions for seamless communication. Enjoy either pinless
+                or scratch card airtime topups at affordable prices .
+              </p>
+              <a href="/products" class="btn btn-primary">Explore...</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5">Why Choose Us?</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <h5>Trusted by Thousands</h5>
+          <p>Our services are designed to meet the needs of individuals and businesses, with a focus on efficiency and reliability.</p>
+        </div>
+        <div class="col-md-6">
+          <h5>Commitment to Excellence</h5>
+          <p>We prioritize customer satisfaction by delivering innovative and dependable solutions at affordable prices.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="py-5 bg-primary text-white text-center">
+    <div class="container">
+      <h2>Get in Touch</h2>
+      <p>Have questions or need more information? We're here to help!</p>
+      <a href="{% url 'contact' %}" class="btn btn-light">Contact Us</a>
+    </div>
+  </section>
 
 <section id="recent-posts" class="py-5 bg-light">
     <!-- Section Title -->
     <div class="container text-center mb-5">
-      <h2 class="fw-bold">Recent Posts</h2>
-      <p class="text-muted">Necessitatibus eius consequatur</p>
+      <h2 class="fw-bold">Service Updates </h2>
+      <p class="text-muted">We added more services for you </p>
     </div>
 
     <div class="container">
@@ -33,7 +107,7 @@
                 <div><i class="bi bi-folder2"></i> <span class="ps-1">Politics</span></div>
               </div>
               <hr>
-              <a href="blog-details.html" class="btn btn-link mt-auto text-decoration-none">Read More <i class="bi bi-arrow-right"></i></a>
+              <a href="/products" class="btn btn-link mt-auto text-decoration-none">Explore...<i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
         </div>
@@ -52,7 +126,7 @@
                 <div><i class="bi bi-folder2"></i> <span class="ps-1">Sports</span></div>
               </div>
               <hr>
-              <a href="blog-details.html" class="btn btn-link mt-auto text-decoration-none">Read More <i class="bi bi-arrow-right"></i></a>
+              <a href="/products" class="btn btn-link mt-auto text-decoration-none">Explore... <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
         </div>
@@ -71,7 +145,7 @@
                 <div><i class="bi bi-folder2"></i> <span class="ps-1">Economics</span></div>
               </div>
               <hr>
-              <a href="blog-details.html" class="btn btn-link mt-auto text-decoration-none">Read More <i class="bi bi-arrow-right"></i></a>
+              <a href="/products" class="btn btn-link mt-auto text-decoration-none">Explore... <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
         </div>

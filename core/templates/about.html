@@ -3,111 +3,151 @@
 
 {% block body %}
 
-  <section id="testimonials" class="py-5 bg-light">
-    <!-- Section Title -->
-    <div class="container text-center mb-5">
-      <h2 class="fw-bold">ABOUT US</h2>
-      <p class="text-muted">Necessitatibus eius consequatur</p>
+<!-- Hero Section -->
+  <section class="py-5 bg-success text-white text-center">
+    <div class="container">
+      <h1>About Us</h1>
+      <p class="lead">Who we Are !! </p>
     </div>
+  </section>
+
+<!--  <section id="testimonials" class="py-5 bg-light">-->
+<!--    &lt;!&ndash; Section Title &ndash;&gt;-->
+<!--    <div class="container text-center mb-5">-->
+<!--      <h2 class="fw-bold">ABOUT US</h2>-->
+<!--      <p class="text-muted">WHO ARE WE !!</p>-->
+<!--    </div>-->
+
+    <!-- About Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h2>Who We Are</h2>
+          <p>We are a leading agency specializing in MPESA Superagency services, device and accessories sales, and airtime distribution. With years of experience, we are committed to delivering innovative and reliable solutions to individuals and businesses.</p>
+        </div>
+        <div class="col-lg-6">
+          <img src="{% static 'images/harvesterslogo.jpg' %}" alt="About Us" class="img-fluid rounded">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission, Vision, and Values -->
+  <section class="py-5 bg-light shadow">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-lg-4">
+          <h3>Our Mission</h3>
+          <p>To provide fast, reliable, and affordable solutions that empower businesses and individuals to thrive in today’s digital landscape.</p>
+        </div>
+        <div class="col-lg-4">
+          <h3>Our Vision</h3>
+          <p>To be the leading service provider in financial technology and communication solutions in Kenya and beyond.</p>
+        </div>
+        <div class="col-lg-4">
+          <h3>Our Values</h3>
+          <p>Integrity, Innovation, Customer-Centricity, Excellence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Do Section -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center">What We Do</h2>
+      <div class="row text-center mt-4">
+        <div class="col-md-4">
+          <div class="card border-0 shadow">
+            <div class="card-body">
+              <h5 class="card-title">MPESA Superagency</h5>
+              <p class="card-text">Reliable e-float distribution and cash handling solutions for businesses and agents.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow">
+            <div class="card-body">
+              <h5 class="card-title">Device Sales</h5>
+              <p class="card-text">A wide range of devices and accessories at competitive prices with reliable support.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow">
+            <div class="card-body">
+              <h5 class="card-title">Airtime Sales</h5>
+              <p class="card-text">Convenient airtime solutions for businesses and individuals to stay connected.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
     <!-- Testimonial Content -->
     <div class="container">
+      <div class="text-center">
+        <h3>Our Branches</h3>
+      </div>
       <div class="row g-4">
         <div class="col-md-6">
           <div class="card border-0 shadow-sm h-100">
-            <img src="{% static 'images/harvesterslogo.jpg'%}" class="card-img-top rounded-circle mx-auto mt-3" alt="James Smith" style="width: 100px; height: 100px; object-fit: cover;">
+            <img src="{% static 'images/frontier1.jpg'%}" class="card-img-top rounded mx-auto mt-3" alt="James Smith" style="width: 100px; height: 100px; object-fit: cover;">
             <div class="card-body text-center">
               <blockquote class="blockquote">
                 <p class="mb-3">
                   “Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident deleniti iusto molestias, dolore vel fugiat ab placeat ea?”
                 </p>
               </blockquote>
-              <p class="fw-bold mb-0">James Smith</p>
+              <p class="fw-bold mb-0">Thika Branch</p>
             </div>
           </div>
         </div>
         <div class="col-md-6">
           <div class="card border-0 shadow-sm h-100">
-            <img src="{% static 'images/harvesterslogo.jpg'%}" class="card-img-top rounded-circle mx-auto mt-3" alt="Kate Smith" style="width: 100px; height: 100px; object-fit: cover;">
+            <img src="{% static 'images/frontier2.jpg'%}" class="card-img-top rounded mx-auto mt-3" alt="Kate Smith" style="width: 100px; height: 100px; object-fit: cover;">
             <div class="card-body text-center">
               <blockquote class="blockquote">
                 <p class="mb-3">
                   “Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident deleniti iusto molestias, dolore vel fugiat ab placeat ea?”
                 </p>
               </blockquote>
-              <p class="fw-bold mb-0">Kate Smith</p>
+              <p class="fw-bold mb-0">Malaba Branch</p>
             </div>
           </div>
         </div>
         <div class="col-md-6">
           <div class="card border-0 shadow-sm h-100">
-            <img src="{% static 'images/harvesterslogo.jpg'%}" class="card-img-top rounded-circle mx-auto mt-3" alt="Claire Anderson" style="width: 100px; height: 100px; object-fit: cover;">
+            <img src="{% static 'images/frontier2.jpg'%}" class="card-img-top rounded mx-auto mt-3" alt="Claire Anderson" style="width: 100px; height: 100px; object-fit: cover;">
             <div class="card-body text-center">
               <blockquote class="blockquote">
                 <p class="mb-3">
                   “Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident deleniti iusto molestias, dolore vel fugiat ab placeat ea?”
                 </p>
               </blockquote>
-              <p class="fw-bold mb-0">Claire Anderson</p>
+              <p class="fw-bold mb-0">Githunguri Branch</p>
             </div>
           </div>
         </div>
         <div class="col-md-6">
           <div class="card border-0 shadow-sm h-100">
-            <img src="{% static 'images/harvesterslogo.jpg'%}" class="card-img-top rounded-circle mx-auto mt-3" alt="Dan Smith" style="width: 100px; height: 100px; object-fit: cover;">
+            <img src="{% static 'images/harvesterslogo.jpg'%}" class="card-img-top rounded mx-auto mt-3" alt="Dan Smith" style="width: 100px; height: 100px; object-fit: cover;">
             <div class="card-body text-center">
               <blockquote class="blockquote">
                 <p class="mb-3">
                   “Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident deleniti iusto molestias, dolore vel fugiat ab placeat ea?”
                 </p>
               </blockquote>
-              <p class="fw-bold mb-0">Dan Smith</p>
+              <p class="fw-bold mb-0">Kibwezi Branch</p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-
-<section id="about" class="about section py-5 bg-success text-white">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6 mb-4 mb-lg-0">
-          <img src=  "{% static 'images/frontier1.jpg' %}" alt="Image" class="img-fluid rounded" data-bs-toggle="tooltip" title="More than 50 years experience">
-        </div>
-        <div class="col-lg-6">
-          <h3 class="text-muted">Why Choose Us</h3>
-          <h2 class="mb-4">More than <strong>50 years of experience</strong> in the agriculture industry</h2>
-          <p class="text-muted">Reprehenderit, odio laboriosam? Blanditiis quae ullam quasi illum minima nostrum perspiciatis error consequatur sit nulla.</p>
-
-          <div class="row">
-            <div class="col-12 d-flex align-items-start mb-4">
-              <i class="bi bi-cloud-rain display-6 me-3"></i>
-              <div>
-                <h4>Plants Need Rain</h4>
-                <p class="text-muted">Lorem ipsum dolor sit amet.</p>
-              </div>
-            </div>
-            <div class="col-12 d-flex align-items-start mb-4">
-              <i class="bi bi-heart display-6 me-3"></i>
-              <div>
-                <h4>Love Organic Foods</h4>
-                <p class="text-muted">Lorem ipsum dolor sit amet.</p>
-              </div>
-            </div>
-            <div class="col-12 d-flex align-items-start">
-              <i class="bi bi-shop display-6 me-3"></i>
-              <div>
-                <h4>Sell Veggies</h4>
-                <p class="text-muted">Lorem ipsum dolor sit amet.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- /About Section -->
 
   <!-- About 3 Section -->
   <section id="about-3" class="about-3 section py-5">
@@ -127,7 +167,7 @@
             <li><i class="bi bi-check-circle text-success me-2"></i>Velit explicabo vitae repellendu</li>
             <li><i class="bi bi-check-circle text-success me-2"></i>Repellat aliquam nihil illo</li>
           </ul>
-          <a href="#" class="btn btn-primary mt-3">Get in Touch</a>
+          <a href="/contact" class="btn btn-primary mt-3">Get in Touch</a>
         </div>
       </div>
     </div>
