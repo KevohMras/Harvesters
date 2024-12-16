@@ -1,7 +1,7 @@
 from django.shortcuts import redirect,render
 from django.core.mail import send_mail
 from django.conf import settings
-from pyexpat.errors import messages
+from django.contrib import messages
 
 from .models import Product
 from .models import Subscriber

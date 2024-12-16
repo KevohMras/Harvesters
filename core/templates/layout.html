@@ -74,6 +74,17 @@
             </div>
 
             <!-- Newsletter Subscribe Section -->
+
+            {% if messages %}
+            <div>
+             {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">
+                     {{ message }}
+                </div>
+             {% endfor %}
+            </div>
+            {% endif %}
+
             <div class="col-md-4 mb-4">
                 <h5 class="text-uppercase fw-bold">Subscribe to Our Newsletter</h5>
                 <p>Stay updated with our latest services, offers, and insights delivered directly to your inbox.</p>
