@@ -16,7 +16,6 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.conf.urls import handler404
 from core import views
 from django.conf import settings
 from django.conf.urls.static import static
@@ -29,7 +28,6 @@ urlpatterns = [
     path('products/', views.products, name="products"),
     path('contact/', views.contact, name="contact"),
     path("subscribe/", views.subscribe, name="subscribe"),
-    # path("404/", views.page_not_found, name="404"),
 ]
 
 if settings.DEBUG:

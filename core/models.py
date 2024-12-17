@@ -15,3 +15,14 @@ class Subscriber(models.Model):
 
     def __str__(self):
         return self.email
+
+
+class Contact(models.Model):
+    name = models.CharField(max_length=50)
+    email = models.EmailField()
+    subject = models.CharField(max_length=150)
+    message = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)  # Record date when submitted
+
+    def __str__(self):
+        return f"{self.name} - {self.subject}"
