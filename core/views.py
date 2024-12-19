@@ -19,8 +19,8 @@ def services(request):
 def products(request):
     return render(request, "products.html")
 
-def contactform(request):
-    return render(request, "contact.html")
+# def contactform(request):
+#     return render(request, "contact.html")
 
 def contact(request):
     if request.method == "POST":
