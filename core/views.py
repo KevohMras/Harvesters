@@ -1,6 +1,6 @@
 from django.shortcuts import redirect,render
-from django.core.mail import send_mail
-from django.conf import settings
+# from django.core.mail import send_mail
+# from django.conf import settings
 from django.contrib import messages
 
 from .models import Product
@@ -19,10 +19,10 @@ def services(request):
 def products(request):
     return render(request, "products.html")
 
-def contact(request):
+def contactform(request):
     return render(request, "contact.html")
 
-def contact_view(request):
+def contact(request):
     if request.method == "POST":
         # Extract form data from the POST request
         name = request.POST.get('name')

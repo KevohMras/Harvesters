@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from core import views
+# from core.views import contactform
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -26,7 +27,7 @@ urlpatterns = [
     path('about/', views.about, name="about"),
     path('services/', views.services, name="services"),
     path('products/', views.products, name="products"),
-    path('contact/', views.contact, name="contact"),
+    path('contactform/', views.contactform, name="contactform"),
     path("subscribe/", views.subscribe, name="subscribe"),
 ]
 
