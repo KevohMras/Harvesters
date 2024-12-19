@@ -1,6 +1,6 @@
 from django.shortcuts import redirect,render
-# from django.core.mail import send_mail
-# from django.conf import settings
+from django.core.mail import send_mail
+from django.conf import settings
 from django.contrib import messages
 
 from .models import Product
@@ -22,68 +22,30 @@ def products(request):
 def contact(request):
     return render(request, "contact.html")
 
-
 def contact_view(request):
     if request.method == "POST":
-        # Debug: Print request.POST data to confirm form submission
-        print(request.POST)
-
-        # Extract form data
+        # Extract form data from the POST request
         name = request.POST.get('name')
         email = request.POST.get('email')
         subject = request.POST.get('subject')
         message = request.POST.get('message')
 
-        # Debug: Confirm data is being captured
-        print("Name:", name)
-        print("Email:", email)
-        print("Subject:", subject)
-        print("Message:", message)
-
-        # Save the data to the database
-        if name and email and subject and message:  # Basic validation
+        # Validate data and save it to the database
+        if name and email and subject and message:  # Basic validation to ensure no field is empty
             Contact.objects.create(
                 name=name,
                 email=email,
                 subject=subject,
                 message=message
             )
-            print("Data saved successfully")
-            return redirect('success_page')  # Redirect after successful save
+            # Add a success message
+            messages.success(request, "Your message has been sent successfully!")
+        else:
+            # Add an error message
+            messages.error(request, "All fields are required. Please fill out the form correctly.")
 
+    # Render the contact form template
     return render(request, 'contact.html')
-
-# def contact_view(request):
-#     if request.method == "POST":
-#         name = request.POST.get('name')  # Extract the 'name' field
-#         email = request.POST.get('email')  # Extract the 'email' field
-#         subject = request.POST.get('subject')  # Extract the 'subject' field
-#         message = request.POST.get('message')  # Extract the 'message' field
-#
-#         # Save the data to the database
-#         Contact.objects.create(name=name, email=email, subject=subject, message=message)
-#
-#         return redirect('success_page')  # Redirect to success page after submission
-#
-#     return render(request, 'contact.html')  # Render the contact form page
-
-# def contact(request):
-#     if request.method == 'POST':
-#         name = request.POST.get('name')
-#         email = request.POST.get('email')
-#         message = request.POST.get('message')
-#
-#         # Send an email notification
-#         send_mail(
-#             f'New Contact Message from {name}',
-#             f'Message: {message}\n\nEmail: {email}',
-#             settings.DEFAULT_FROM_EMAIL,
-#             [settings.DEFAULT_FROM_EMAIL],  # Replace with your email
-#         )
-#
-#         return render(request, "contact.html", {"success": True})
-#
-#     return render(request, "contact.html")
 
 def products(request):
     product_list = Product.objects.all()

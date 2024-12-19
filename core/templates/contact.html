@@ -51,16 +51,22 @@
         <!-- End Contact Information -->
 
         <!-- Contact Form -->
-        {% if success_message %}
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-               <strong>Success!</strong> {{ success_message }}
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        {% endif %}
-
 
         <div class="col-lg-8">
-          <form method="post" role="form">
+           {% if messages %}
+               <div class="row">
+                  <div class="col-lg-8 mx-auto">
+                     {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                      {{ message }}
+                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                   {% endfor %}
+                  </div>
+               </div>
+            {% endif %}
+
+          <form method="POST" role="form" action="{% url 'contact'%}">
             {% csrf_token%}
             <div class="row">
               <div class="col-md-6 mb-3">
