@@ -80,19 +80,19 @@
 
             <!-- Newsletter Subscribe Section -->
 
-            {% if messages %}
-            <div>
-             {% for message in messages %}
-                <div class="alert alert-{{ message.tags }}">
-                     {{ message }}
-                </div>
-             {% endfor %}
-            </div>
-            {% endif %}
-
             <div class="col-md-4 mb-4">
                 <h5 class="text-uppercase fw-bold">Subscribe to Our Newsletter</h5>
                 <p>Stay updated with our latest services, offers, and insights delivered directly to your inbox.</p>
+
+                 {% if messages %}
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                         {% for message in messages %}
+                            {{ message }}
+                        {% endfor %}
+                          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                     </div>
+                 {% endif %}
+
                 <form class="input-group" method="POST" action="/subscribe/">
                      {% csrf_token %}
                          <input type="email" class="form-control" name="email" placeholder="Enter your email" required>
